@@ -22,10 +22,12 @@ export default function Contact() {
             <label htmlFor="message" className="block text-sm mb-1">Message</label>
             <textarea id="message" name="message" rows={5} className="w-full rounded-xl border border-black/10 px-3 py-2 focus:ring-2 focus:ring-black/20" placeholder="Let’s build something…" />
           </div>
-          <button type="submit" className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-black bg-black text-white hover:translate-y-[-1px] active:translate-y-[0px] transition-transform">
+          <button
+            type="submit"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-black bg-black text-white hover:translate-y-[-1px] active:translate-y-[0px] transition-transform"
+          >
             Send
           </button>
-          <p className="text-xs text-black/50">Replace the action URL with your Formspree endpoint.</p>
         </form>
 
         <div className="space-y-4">
