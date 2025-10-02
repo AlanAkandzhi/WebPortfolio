@@ -13,7 +13,7 @@ export default function Education() {
         <article className={card}>
           <div className="flex items-start gap-4">
             <img
-              src="/logos/uia.png"
+              src={import.meta.env.BASE_URL + "logos/uia.png"}
               alt="University of Agder"
               className="h-12 w-12 object-contain rounded-xl border border-black/10 bg-white p-1"
             />
@@ -31,7 +31,7 @@ export default function Education() {
         <article className={card}>
           <div className="flex items-start gap-4">
             <img
-              src="/logos/vfu.png"
+              src={import.meta.env.BASE_URL + "logos/vfu.png"}
               alt="Varna Free University"
               className="h-12 w-12 object-contain rounded-xl border border-black/10 bg-white p-1"
             />

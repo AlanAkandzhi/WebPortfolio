@@ -28,29 +28,28 @@ function Screenshot({ src, alt }) {
 
 export default function Projects() {
   const featured = [
-  {
-    title: "RogueDefense",
-    blurb: "A roguelike tower defense experiment. Gameplay systems, waves, and upgrades.",
-    repo: "https://github.com/AlanAkandzhi/RogueDefense",
-    tech: ["C#"],
-    img: "/projects/roguedefense.png",
-  },
-  {
-    title: "Arena Clash",
-    blurb: "Fast-paced arena combat prototype with character control and combat loops.",
-    repo: "https://github.com/AlanAkandzhi/Arena_Clash",
-    tech: ["C++"],
-    img: "/projects/arenaclash.png",
-  },
-  {
-    title: "CRUD App",
-    blurb: "Simple full-stack CRUD demo—clean structure and readable code.",
-    repo: "https://github.com/AlanAkandzhi/C.R.U.D-APP",
-    tech: ["HTML", "CSS", "JavaScript", "Python"],
-    img: "/projects/crud.png",
-  },
-];
-
+    {
+      title: "RogueDefense",
+      blurb: "A roguelike tower defense experiment. Gameplay systems, waves, and upgrades.",
+      repo: "https://github.com/AlanAkandzhi/RogueDefense",
+      tech: ["C#"],
+      img: import.meta.env.BASE_URL + "projects/roguedefense.png",
+    },
+    {
+      title: "Arena Clash",
+      blurb: "Fast-paced arena combat prototype with character control and combat loops.",
+      repo: "https://github.com/AlanAkandzhi/Arena_Clash",
+      tech: ["C++"],
+      img: import.meta.env.BASE_URL + "projects/arenaclash.png",
+    },
+    {
+      title: "CRUD App",
+      blurb: "Simple full-stack CRUD demo—clean structure and readable code.",
+      repo: "https://github.com/AlanAkandzhi/C.R.U.D-APP",
+      tech: ["HTML", "CSS", "JavaScript", "Python"],
+      img: import.meta.env.BASE_URL + "projects/crud.png",
+    },
+  ];
 
   const upcoming = [
     { title: "Unity/Unreal Project", blurb: "Next gameplay prototype exploring advanced mechanics." },
@@ -80,7 +79,9 @@ export default function Projects() {
             <p className="text-sm text-black/70 mt-1">{p.blurb}</p>
 
             <div className="mt-3 flex flex-wrap items-center gap-2">
-              {p.tech.map(t => <TechBadge key={t} label={t} />)}
+              {p.tech.map((t) => (
+                <TechBadge key={t} label={t} />
+              ))}
             </div>
 
             <div className="mt-4 text-sm">
@@ -108,7 +109,6 @@ export default function Projects() {
             <div className={thumb}><span className="text-xs text-black/50">Coming soon</span></div>
             <h4 className="font-semibold">{p.title}</h4>
             <p className="text-sm text-black/70 mt-1">{p.blurb}</p>
-            {/* no tech badges for upcoming (as requested) */}
           </motion.article>
         ))}
       </div>
