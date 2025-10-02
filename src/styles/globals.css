@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Smooth scroll + selection */
+html { scroll-behavior: smooth; }
+::selection { background: black; color: white; }
+
+/* nicer focus ring for inputs/buttons */
+input, textarea, button, a { outline: none; }
