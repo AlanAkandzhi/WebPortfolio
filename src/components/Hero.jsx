@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 
 function Typewriter({ text, typeMs = 60, holdMs = 5000, eraseMs = 35, restartDelay = 800 }) {
   const [out, setOut] = useState("");
-  const [phase, setPhase] = useState("typing"); // typing | holding | erasing
+  const [phase, setPhase] = useState("typing");
 
   useEffect(() => {
     let id;
